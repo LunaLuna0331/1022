@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" width="1800" height="1360" style="background:#070b14; font-family:'Outfit','Noto Sans TC',sans-serif;">
+  <defs>
+    <radialGradient id="oceanGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0e1f3d" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#080e1c" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#04070e" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="mountainRidgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#144d32"/>
+      <stop offset="50%" stop-color="#2a7a4c"/>
+      <stop offset="100%" stop-color="#0e3a24"/>
+    </linearGradient>
+    <filter id="glowFilter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Base Ocean & Radar Grid -->
+  <rect x="20" y="20" width="860" height="640" rx="16" fill="url(#oceanGlow)" stroke="rgba(0, 240, 255, 0.25)" stroke-width="2"/>
+  <circle cx="480" cy="340" r="120" stroke="rgba(0, 240, 255, 0.12)" stroke-dasharray="4 4" fill="none"/>
+  <circle cx="480" cy="340" r="220" stroke="rgba(0, 240, 255, 0.12)" stroke-dasharray="4 4" fill="none"/>
+  <circle cx="480" cy="340" r="320" stroke="rgba(0, 240, 255, 0.12)" stroke-dasharray="4 4" fill="none"/>
+  <line x1="60" y1="340" x2="840" y2="340" stroke="rgba(0, 240, 255, 0.08)"/>
+  <line x1="480" y1="40" x2="480" y2="620" stroke="rgba(0, 240, 255, 0.08)"/>
+
+  <!-- Taiwan Mainland Vector -->
+  <path d="M 505 180 C 515 195, 520 220, 528 250 C 535 285, 542 320, 538 360 C 532 400, 520 445, 505 480 C 490 515, 475 540, 460 558 C 452 568, 442 562, 440 548 C 438 525, 435 480, 432 430 C 430 380, 435 320, 448 260 C 455 225, 470 190, 485 175 C 492 168, 500 170, 505 180 Z" fill="#102538" stroke="#00f0ff" stroke-width="2.5" filter="url(#glowFilter)"/>
+
+  <!-- Offshore Islands -->
+  <ellipse cx="395" cy="350" rx="9" ry="14" fill="#102538" stroke="#00f0ff" stroke-width="1.5"/>
+  <circle cx="538" cy="465" r="5" fill="#102538" stroke="#00f0ff" stroke-width="1.5"/>
+  <circle cx="550" cy="505" r="7" fill="#102538" stroke="#00f0ff" stroke-width="1.5"/>
+
+  <!-- Central Mountain Range -->
+  <path d="M 495 230 C 505 260, 510 300, 508 350 C 505 400, 495 440, 480 475 C 475 485, 470 480, 468 470 C 462 430, 460 380, 465 330 C 470 290, 480 250, 490 230 Z" fill="url(#mountainRidgeGrad)" stroke="#2f8e58" stroke-width="2" opacity="0.95"/>
+  <path d="M 492 250 C 500 280, 502 320, 500 365 C 498 405, 490 435, 478 460 C 474 468, 470 460, 470 450 C 468 410, 468 370, 472 320 C 476 280, 484 255, 492 250 Z" fill="#246a42" stroke="#46ba78" stroke-width="2"/>
+  <path d="M 488 260 L 494 300 L 496 345 L 492 390 L 485 435 L 477 455" stroke="#afffd0" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Peaks -->
+  <polygon points="488,368 493,380 483,380" fill="#fff" stroke="#ffb800" stroke-width="1.5"/>
+  <text x="498" y="378" font-size="11" font-weight="700" fill="#fff">玉山 3952m</text>
+
+  <!-- Typhoon Track Line -->
+  <path d="M 800 480 C 680 430, 580 370, 520 330 C 470 295, 420 280, 260 250" stroke="#ff3366" stroke-width="4" fill="none" stroke-dasharray="8 6"/>
+
+  <!-- Typhoon Vortex and Spiral Arms -->
+  <g transform="translate(620, 395)">
+    <circle cx="0" cy="0" r="140" fill="rgba(255, 51, 102, 0.1)" stroke="rgba(255, 51, 102, 0.5)" stroke-width="2" stroke-dasharray="6 4"/>
+    <path d="M 0 0 C 40 80, 100 120, 160 80 C 190 60, 180 10, 150 -40" stroke="rgba(0, 240, 255, 0.9)" stroke-width="5" fill="none"/>
+    <path d="M 0 0 C -40 -80, -100 -120, -160 -80 C -190 -60, -180 -10, -150 40" stroke="rgba(0, 240, 255, 0.9)" stroke-width="5" fill="none"/>
+    <path d="M 0 0 C 80 -40, 120 -100, 80 -160 C 60 -190, 10 -180, -40 -150" stroke="rgba(255, 184, 0, 0.85)" stroke-width="4" fill="none"/>
+    <path d="M 0 0 C -80 40, -120 100, -80 160 C -60 190, -10 180, 40 150" stroke="rgba(255, 184, 0, 0.85)" stroke-width="4" fill="none"/>
+    <circle cx="0" cy="0" r="50" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="8" stroke-dasharray="25 15"/>
+    <circle cx="0" cy="0" r="14" fill="#070d18" stroke="#ff3366" stroke-width="3"/>
+    <circle cx="0" cy="0" r="4" fill="#ff3366"/>
+    <text x="18" y="5" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#fff">TYPHOON EYE</text>
+  </g>
+
+  <!-- HUD Telemetry Overlay Banner -->
+  <rect x="40" y="40" width="560" height="70" rx="8" fill="rgba(13, 21, 39, 0.88)" stroke="rgba(0, 240, 255, 0.35)" stroke-width="1.5"/>
+  <text x="56" y="68" font-size="17" font-weight="700" fill="#00f0ff">颱風對台灣影響：原理 3D / 向量互動工作台</text>
+  <text x="56" y="94" font-family="'JetBrains Mono', monospace" font-size="12" fill="#9bb0c9">路徑：穿心颱（貫穿中央山脈） | 中心氣壓：935 hPa | 風速：51 m/s (16級)</text>
+
+  <!-- Watermark Footer -->
+  <text x="580" y="650" font-family="'JetBrains Mono', monospace" font-size="11" fill="rgba(0, 240, 255, 0.45)">SNAPSHOT LOCATION: c:\Users\User\Desktop\1022\snapshots\</text>
+</svg>
